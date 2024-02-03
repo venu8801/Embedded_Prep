@@ -1,0 +1,25 @@
+Nvidia Questions Round: 1
+
+1.What are the differences between a union and a structure
+2.Tell me a scenario where using a union is much better than a structure (create a meaningful scenario)
+3.What is structure padding 
+4. What is structrue packing
+5. Why structure padding is done 
+6. What are the advantages and disadvantages of structure padding
+7. What are the memory sections of an elf file
+8. Why const keyword applied to local var goes to stack ?
+9. If const applied to local var can be modified indirectly then what is the use of const for local if it can be modified ?
+10. If you were to choose a SPI memory or I2C memory which one would you choose and why ?
+11. What is a bootloader ?
+12. What is the role of a bootloader ?
+13. How did you port kernel to Rpi what steps you followed and what are the problems you faced
+14. Reverse a linked list ?
+15. What is RTOS ?
+16. What are the differences between RTOS and GPOS ?
+17. Why GPOS scheduler prioritizes throughput ? (I told GPOS scheduler prioritises four lower priority tasks instead of one higher priority if they take same time)
+18. What is the difference between synchronous and asynchronous buses
+19. How a GPOS scheduler works explain in detail
+20. Where does const variables get stored ?
+21. Describe about UART
+22. Tell me about your projects
+23. GPOS schdeuler why throughput is preferred

@@ -79,11 +79,12 @@ void *print_even(void *arg) {
 
         if (count % 2 == 0) {
             printf("even: %d\n", count);
+	    sleep(1);
             count++;
-            pthread_cond_signal(&odd_cond); // signal odd thread
+            pthread_cond_signal(&even_cond); // signal odd thread
         } else {
             printf("waiting on cond var\n");
-            pthread_cond_wait(&even_cond, &mutexCount); // wait for signal from odd thread
+            pthread_cond_wait(&odd_cond, &mutexCount); // wait for signal from odd thread
         }
 
         pthread_mutex_unlock(&mutexCount);
@@ -97,11 +98,12 @@ void *print_odd(void *arg) {
 
         if (count % 2 != 0) {
             printf("odd: %d\n", count);
+	    sleep(1);
             count++;
-            pthread_cond_signal(&even_cond); // signal even thread
+            pthread_cond_signal(&odd_cond); // signal even thread
         } else {
             printf("waiting on cond var\n");
-            pthread_cond_wait(&odd_cond, &mutexCount); // wait for signal from even thread
+            pthread_cond_wait(&even_cond, &mutexCount); // wait for signal from even thread
         }
 
         pthread_mutex_unlock(&mutexCount);
