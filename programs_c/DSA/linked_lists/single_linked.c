@@ -1,45 +1,10 @@
 /* singly linked list and some operations on linked list */
 #include<stdio_ext.h>
 #include<stdlib.h>
-typedef struct node
-{
-	int data;
-	struct node *link;
-}Node;
-
+#include "Node.h"
 Node *head = NULL; // struct node *
 
-void addBefore(int data)
-{
-	Node *temp;
-	if(head == NULL)
-	{
-		temp = (Node *)malloc(1 * sizeof(Node));
-		if(temp == NULL)
-		{
-			printf("malloc failed\n");
-			exit(-1);
-		}
-		temp->data = data;
-		temp->link = NULL;
-		head = temp;
-		return;
-		
-	}
-	
-	temp = (Node *)malloc(1 * sizeof(Node ));
-	if(temp == NULL)
-	{
-		printf("malloc failed\n");
-		exit(-1);
-
-	}
-	temp->data = data;
-	temp->link = head;
-	head = temp;
-	return;
-}
-
+void addBefore(int data);
 void DisplayNodes()
 {
 	if(head == NULL)
@@ -60,6 +25,39 @@ void DisplayNodes()
 
 
 }
+
+/* delete duplicate nodes */
+void deleteDuplicates(){
+	if(head == NULL)
+		return;
+	struct node *p = head, *q , *prev = p, *temp;
+	while(p != NULL){
+		q = p->link;
+		prev = p;
+		while(q != NULL){
+			
+			if(p->data == q->data){ //delete q
+				prev->link = q->link;
+				temp = q;
+				q = q->link;
+				free(temp);
+				
+
+			}
+			else{
+				prev = q;
+				q = q->link;
+			}
+
+		}
+
+		p = p->link;
+	}
+
+	return;
+}
+
+
 
 /* finding middle node(s) in a single pass */
 void find_middle(){
@@ -386,7 +384,7 @@ int main()
 		printf("-----------------------------Singly Linked List---------------------------------\n");
 		printf("a.Add a node before\nb.Display All nodes\nc.Add after a node\nd.Create List\ne.Delete after node\n");
 		printf("f.Delete particular node\ng.Swap two nodes (links)\nh.reverse nodes\ni.reverse from pos\nj.find middle node\n");
-		printf("------z.exit-------\n");
+		printf("k.delete duplicates\n------z.exit-------\n");
 		printf("Select an option: ");
 		__fpurge(stdin);
 		scanf("%c",&opt);
@@ -468,6 +466,10 @@ int main()
 			case 'j':
 				printf("----Finding Middle nodes----\n");
 				find_middle();
+				break;
+			case 'k':
+				printf("------------Delete Duplicates----------\n");
+				deleteDuplicates();
 				break;
 			case 'z':
 				printf("----------Exit---------------\n");

@@ -1,0 +1,8 @@
+tasks to do 
+
+1. Implement copy and move command
+2. Implement copy using shared memory concept
+3. Implement thread synchronization where two threads try to write or read a single file
+4. Create Producer and Consumer example in condition var
+5. Create Producer and Consumer example in semaphore
+
