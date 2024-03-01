@@ -4,7 +4,7 @@
 #include <unistd.h>
 void * print_even(void *arg);
 void * print_odd(void *arg);
-int count = -1; //global shared resource 
+int count = 0; //global shared resource 
 pthread_mutex_t mutexCount;
 pthread_cond_t odd_cond, even_cond;
 int main()
@@ -74,12 +74,13 @@ void * print_odd(void *arg)
 
 
 void *print_even(void *arg) {
-    while (count <= 100) {
+	int i;
+	for(i = 0; i < 100; i++){
+//    while (count <= 100) {
         pthread_mutex_lock(&mutexCount);
 
         if (count % 2 == 0) {
             printf("even: %d\n", count);
-	    sleep(1);
             count++;
             pthread_cond_signal(&even_cond); // signal odd thread
         } else {
@@ -89,16 +90,17 @@ void *print_even(void *arg) {
 
         pthread_mutex_unlock(&mutexCount);
     }
-    pthread_exit(NULL);
+   // pthread_exit(NULL);
 }
 
 void *print_odd(void *arg) {
-    while (count <= 100) {
+	int i;
+	for(i = 0; i < 100; i++){
+    //while (count <= 100) {
         pthread_mutex_lock(&mutexCount);
 
         if (count % 2 != 0) {
             printf("odd: %d\n", count);
-	    sleep(1);
             count++;
             pthread_cond_signal(&odd_cond); // signal even thread
         } else {
@@ -108,7 +110,7 @@ void *print_odd(void *arg) {
 
         pthread_mutex_unlock(&mutexCount);
     }
-    pthread_exit(NULL);
+    //pthread_exit(NULL);
 }
 
 

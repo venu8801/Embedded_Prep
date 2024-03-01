@@ -1,0 +1,452 @@
+make: Entering directory '/home/venugopal/android_build'
+rm -rf /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ/ubootenv.sh
+mkdir -p /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_COLLECTION
+if [ -n "0" ]; then \
+	echo 'export ROLLBACK_INDEX_IN_FIT=0' > /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ/ubootenv.sh; \
+	echo 'export ROLLBACK_INDEX_IN_CONTAINER=0' >> /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ/ubootenv.sh; \
+else \
+	echo 'export ROLLBACK_INDEX_IN_FIT=' > /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ/ubootenv.sh; \
+	echo 'export ROLLBACK_INDEX_IN_CONTAINER=' >> /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ/ubootenv.sh; \
+fi
+Merging KERNEL config srcs: /home/venugopal/android_build/vendor/nxp-opensource/kernel_imx/arch/arm64/configs/imx8mp_phyboard_pollux_android_defconfig /home/venugopal/android_build/device/nxp/imx8m/phyboard_pollux/android_addition_defconfig
+Building arm64 2020.04 U-Boot ...
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+Using /home/venugopal/android_build/vendor/nxp-opensource/kernel_imx/arch/arm64/configs/imx8mp_phyboard_pollux_android_defconfig as base
+Merging /home/venugopal/android_build/device/nxp/imx8m/phyboard_pollux/android_addition_defconfig
+make[2]: Entering directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/kernel_imx'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: Entering directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/KERNEL_OBJ'
+***
+*** The source tree is not clean, please run 'make mrproper'
+*** in /home/venugopal/android_build/vendor/nxp-opensource/kernel_imx
+***
+make[2]: *** [/home/venugopal/android_build/vendor/nxp-opensource/kernel_imx/Makefile:535: outputmakefile] Error 1
+make[2]: Leaving directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/KERNEL_OBJ'
+make[1]: *** [Makefile:179: sub-make] Error 2
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/kernel_imx'
+make: *** [/home/venugopal/android_build/device/nxp/common/build/kernel.mk:160: /home/venugopal/android_build/out/target/product/phyboard_pollux/obj/KERNEL_OBJ/.config] Error 2
+make: *** Waiting for unfinished jobs....
+  CLEAN   dts/../arch/arm/dts
+  CLEAN   dts
+  CLEAN   examples/standalone
+  CLEAN   tools
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   tools/lib tools/common
+  CLEAN   scripts/dtc
+  CLEAN   spl/arch spl/board spl/cmd spl/common spl/disk spl/drivers spl/dts spl/env spl/fs spl/lib spl/u-boot-spl spl/u-boot-spl-nodtb.bin spl/u-boot-spl.bin spl/u-boot-spl.cfgout spl/u-boot-spl.lds spl/u-boot-spl.map spl/u-boot.cfg
+  CLEAN   u-boot-dtb.bin u-boot.lds u-boot.dtb u-boot.cfg.configs u-boot-dtb.img u-boot.map u-boot-nodtb.bin u-boot.cfg u-boot.bin u-boot.srec u-boot u-boot.img u-boot.sym System.map
+  CLEAN   include/config include/generated spl
+  CLEAN   .config include/autoconf.mk include/autoconf.mk.dep include/config.h
+make[2]: Leaving directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+make[2]: Entering directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+  HOSTCC  scripts/basic/fixdep
+  GEN     ./Makefile
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.c
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make[2]: Leaving directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_command.c: In function ‘flash’:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_command.c:874:7: warning: unused variable ‘status’ [-Wunused-variable]
+   int status, mmc_no;
+       ^~~~~~
+In file included from /home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_boot.c:57:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/include/../lib/avb/fsl/fsl_public_key.h:11:22: warning: ‘fsl_public_key’ defined but not used [-Wunused-variable]
+ static unsigned char fsl_public_key[] = {
+                      ^~~~~~~~~~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_getvar.c:121:13: warning: ‘serial’ defined but not used [-Wunused-variable]
+ static char serial[IMX_SERIAL_LEN];
+             ^~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c: In function ‘fastboot_setup’:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c:359:2: warning: ‘serialnr.high’ is used uninitialized in this function [-Wuninitialized]
+  sprintf(serial, "%08x%08x", serialnr.high, serialnr.low);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c:359:2: warning: ‘serialnr.low’ is used uninitialized in this function [-Wuninitialized]
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+===================== WARNING ======================
+This board does not use CONFIG_WDT (DM watchdog support).
+Please update the board to use CONFIG_WDT before the
+v2019.10 release.
+Failure to update by the deadline may result in board removal.
+See doc/driver-model/migration.rst for more info.
+====================================================
+build post process
+/bin/sh: 10: @: not found
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/arm-trusted-firmware'
+  CLEAN
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/arm-trusted-firmware'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+include misc.mak
+include m4.mak
+include android.mak
+include test.mak
+include autobuild.mak
+include rev_a.mak
+include alias.mak
+imx8qm clean done
+include misc.mak
+include m4.mak
+include android.mak
+include test.mak
+include autobuild.mak
+include rev_a.mak
+include alias.mak
+imx8qx clean done
+imx8ulp clean done
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+Compiling mkimage_imx8
+PLAT=imx8mp HDMI=no
+./../scripts/pad_image.sh tee.bin
+Compiling mkimage_imx8
+cc -O2 -Wall -std=c99 -static mkimage_imx8.c -o mkimage_imx8 -lz
+Pad file tee.bin NOT found
+./../scripts/pad_image.sh bl31.bin
+./../scripts/pad_image.sh u-boot-nodtb.bin phycore-imx8mp.dtb
+u-boot-nodtb.bin + phycore-imx8mp.dtb are padded to 828464
+DEK_BLOB_LOAD_ADDR=0x40400000 TEE_LOAD_ADDR=0x56000000 ATF_LOAD_ADDR=0x00970000 ./mkimage_fit_atf.sh phycore-imx8mp.dtb > u-boot.its
+bl31.bin size: 
+42000
+u-boot-nodtb.bin size: 
+800408
+phycore-imx8mp.dtb size: 
+28056
+./mkimage_uboot -E -p 0x3000 -f u-boot.its u-boot.itb
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/uboot@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/fdt@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/atf@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /configurations/config@1 has a unit name, but no reg property
+FIT description: Configuration to load ATF before U-Boot
+Created:         Tue Jun 13 11:13:25 2023
+ Image 0 (uboot@1)
+  Description:  U-Boot (64-bit)
+  Created:      Tue Jun 13 11:13:25 2023
+  Type:         Standalone Program
+  Compression:  uncompressed
+  Data Size:    800408 Bytes = 781.65 KiB = 0.76 MiB
+  Architecture: AArch64
+  Load Address: 0x40200000
+  Entry Point:  unavailable
+ Image 1 (fdt@1)
+  Description:  phycore-imx8mp
+  Created:      Tue Jun 13 11:13:25 2023
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    28056 Bytes = 27.40 KiB = 0.03 MiB
+  Architecture: Unknown Architecture
+ Image 2 (atf@1)
+  Description:  ARM Trusted Firmware
+  Created:      Tue Jun 13 11:13:25 2023
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    42000 Bytes = 41.02 KiB = 0.04 MiB
+  Architecture: AArch64
+  OS:           Unknown OS
+  Load Address: 0x00970000
+ Default Configuration: 'config@1'
+ Configuration 0 (config@1)
+  Description:  phycore-imx8mp
+  Kernel:       unavailable
+  Firmware:     uboot@1
+  FDT:          fdt@1
+  Loadables:    atf@1
+18858+0 records in
+18858+0 records out
+75432 bytes (75 kB, 74 KiB) copied, 0.0533093 s, 1.4 MB/s
+./mkimage_imx8 -version v2 -fit -loader u-boot-spl-ddr.bin 0x920000 -second_loader u-boot.itb 0x40200000 0x60000 -out flash.bin
+Platform:	i.MX8M (mScale)
+ROM VERSION:	v2
+Using FIT image
+LOADER IMAGE:	u-boot-spl-ddr.bin start addr: 0x00920000
+SECOND LOADER IMAGE:	u-boot.itb start addr: 0x40200000 offset: 0x00060000
+Output:		flash.bin
+========= IVT HEADER [HDMI FW] =========
+header.tag: 		0x0
+header.length: 		0x0
+header.version: 	0x0
+entry: 			0x0
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x0
+self: 			0x0
+csf: 			0x0
+reserved2: 		0x0
+boot_data.start: 	0x0
+boot_data.size: 	0x0
+boot_data.plugin: 	0x0
+========= IVT HEADER [PLUGIN] =========
+header.tag: 		0x0
+header.length: 		0x0
+header.version: 	0x0
+entry: 			0x0
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x0
+self: 			0x0
+csf: 			0x0
+reserved2: 		0x0
+boot_data.start: 	0x0
+boot_data.size: 	0x0
+boot_data.plugin: 	0x0
+========= IVT HEADER [LOADER IMAGE] =========
+header.tag: 		0xd1
+header.length: 		0x2000
+header.version: 	0x41
+entry: 			0x920000
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x91ffe0
+self: 			0x91ffc0
+csf: 			0x946dc0
+reserved2: 		0x0
+boot_data.start: 	0x91ffc0
+boot_data.size: 	0x28e60
+boot_data.plugin: 	0x0
+========= OFFSET dump =========
+Loader IMAGE:
+ header_image_off 	0x0
+ dcd_off 		0x0
+ image_off 		0x40
+ csf_off 		0x26e00
+ spl hab block: 	0x91ffc0 0x0 0x26e00
+
+Second Loader IMAGE:
+ sld_header_off 	0x58000
+ sld_csf_off 		0x59020
+ sld hab block: 	0x401fcdc0 0x58000 0x1020
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+./../scripts/pad_image.sh tee.bin
+Pad file tee.bin NOT found
+./../scripts/pad_image.sh bl31.bin
+./../scripts/pad_image.sh u-boot-nodtb.bin phycore-imx8mp.dtb
+TEE_LOAD_ADDR=0x56000000 ATF_LOAD_ADDR=0x00970000 VERSION=v2 ./print_fit_hab.sh 0x60000 phycore-imx8mp.dtb
+0x40200000 0x5B000 0xC3698
+0x402C3698 0x11E698 0x6D98
+0x970000 0x125430 0xA410
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+===================Finish building imx8mp:phycore-imx8mp_android_defconfig ===================
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+make[2]: Entering directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+  CLEAN   dts/../arch/arm/dts
+  CLEAN   dts
+  CLEAN   examples/standalone
+  CLEAN   tools
+  CLEAN   tools/lib tools/common
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/dtc
+  CLEAN   spl/arch spl/board spl/cmd spl/common spl/disk spl/drivers spl/dts spl/env spl/fs spl/lib spl/u-boot-spl spl/u-boot-spl-nodtb.bin spl/u-boot-spl.bin spl/u-boot-spl.cfgout spl/u-boot-spl.lds spl/u-boot-spl.map spl/u-boot.cfg
+  CLEAN   u-boot-dtb.bin u-boot.lds u-boot.dtb u-boot.cfg.configs u-boot-dtb.img u-boot.map u-boot-nodtb.bin u-boot.cfg u-boot.bin u-boot.srec u-boot u-boot.img u-boot.sym System.map
+  CLEAN   include/config include/generated spl
+  CLEAN   .config include/autoconf.mk include/autoconf.mk.dep include/config.h
+make[2]: Leaving directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+make[2]: Entering directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+  HOSTCC  scripts/basic/fixdep
+  GEN     ./Makefile
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.c
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make[2]: Leaving directory '/home/venugopal/android_build/out/target/product/phyboard_pollux/obj/UBOOT_OBJ'
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx'
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+In file included from /home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_boot.c:57:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/include/../lib/avb/fsl/fsl_public_key.h:11:22: warning: ‘fsl_public_key’ defined but not used [-Wunused-variable]
+ static unsigned char fsl_public_key[] = {
+                      ^~~~~~~~~~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_command.c: In function ‘flash’:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_command.c:874:7: warning: unused variable ‘status’ [-Wunused-variable]
+   int status, mmc_no;
+       ^~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_getvar.c:121:13: warning: ‘serial’ defined but not used [-Wunused-variable]
+ static char serial[IMX_SERIAL_LEN];
+             ^~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c: In function ‘fastboot_setup’:
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c:359:2: warning: ‘serialnr.high’ is used uninitialized in this function [-Wuninitialized]
+  sprintf(serial, "%08x%08x", serialnr.high, serialnr.low);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/venugopal/android_build/vendor/nxp-opensource/uboot-imx/drivers/fastboot/fb_fsl/fb_fsl_common.c:359:2: warning: ‘serialnr.low’ is used uninitialized in this function [-Wuninitialized]
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+WARNING 'lpddr4_pmu_train_1d_imem.bin' not found, resulting binary is not-functional
+===================== WARNING ======================
+This board does not use CONFIG_WDT (DM watchdog support).
+Please update the board to use CONFIG_WDT before the
+v2019.10 release.
+Failure to update by the deadline may result in board removal.
+See doc/driver-model/migration.rst for more info.
+====================================================
+build post process
+/bin/sh: 10: @: not found
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/arm-trusted-firmware'
+  CLEAN
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/arm-trusted-firmware'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+include misc.mak
+include m4.mak
+include android.mak
+include test.mak
+include autobuild.mak
+include rev_a.mak
+include alias.mak
+imx8qm clean done
+include misc.mak
+include m4.mak
+include android.mak
+include test.mak
+include autobuild.mak
+include rev_a.mak
+include alias.mak
+imx8qx clean done
+imx8ulp clean done
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+Compiling mkimage_imx8
+PLAT=imx8mp HDMI=no
+./../scripts/pad_image.sh tee.bin
+Compiling mkimage_imx8
+cc -O2 -Wall -std=c99 -static mkimage_imx8.c -o mkimage_imx8 -lz
+Pad file tee.bin NOT found
+./../scripts/pad_image.sh bl31.bin
+./../scripts/pad_image.sh u-boot-nodtb.bin phycore-imx8mp.dtb
+u-boot-nodtb.bin + phycore-imx8mp.dtb are padded to 830688
+DEK_BLOB_LOAD_ADDR=0x40400000 TEE_LOAD_ADDR=0x56000000 ATF_LOAD_ADDR=0x00970000 ./mkimage_fit_atf.sh phycore-imx8mp.dtb > u-boot.its
+bl31.bin size: 
+42000
+u-boot-nodtb.bin size: 
+802632
+phycore-imx8mp.dtb size: 
+28056
+./mkimage_uboot -E -p 0x3000 -f u-boot.its u-boot.itb
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/uboot@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/fdt@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /images/atf@1 has a unit name, but no reg property
+u-boot.itb.tmp: Warning (unit_address_vs_reg): Node /configurations/config@1 has a unit name, but no reg property
+18858+0 records in
+18858+0 records out
+75432 bytes (75 kB, 74 KiB) copied, 0.0508332 s, 1.5 MB/s
+FIT description: Configuration to load ATF before U-Boot
+Created:         Tue Jun 13 11:13:39 2023
+ Image 0 (uboot@1)
+  Description:  U-Boot (64-bit)
+  Created:      Tue Jun 13 11:13:39 2023
+  Type:         Standalone Program
+  Compression:  uncompressed
+  Data Size:    802632 Bytes = 783.82 KiB = 0.77 MiB
+  Architecture: AArch64
+  Load Address: 0x40200000
+  Entry Point:  unavailable
+ Image 1 (fdt@1)
+  Description:  phycore-imx8mp
+  Created:      Tue Jun 13 11:13:39 2023
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    28056 Bytes = 27.40 KiB = 0.03 MiB
+  Architecture: Unknown Architecture
+ Image 2 (atf@1)
+  Description:  ARM Trusted Firmware
+  Created:      Tue Jun 13 11:13:39 2023
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    42000 Bytes = 41.02 KiB = 0.04 MiB
+  Architecture: AArch64
+  OS:           Unknown OS
+  Load Address: 0x00970000
+ Default Configuration: 'config@1'
+ Configuration 0 (config@1)
+  Description:  phycore-imx8mp
+  Kernel:       unavailable
+  Firmware:     uboot@1
+  FDT:          fdt@1
+  Loadables:    atf@1
+./mkimage_imx8 -version v2 -fit -loader u-boot-spl-ddr.bin 0x920000 -second_loader u-boot.itb 0x40200000 0x60000 -out flash.bin
+Platform:	i.MX8M (mScale)
+ROM VERSION:	v2
+Using FIT image
+LOADER IMAGE:	u-boot-spl-ddr.bin start addr: 0x00920000
+SECOND LOADER IMAGE:	u-boot.itb start addr: 0x40200000 offset: 0x00060000
+Output:		flash.bin
+========= IVT HEADER [HDMI FW] =========
+header.tag: 		0x0
+header.length: 		0x0
+header.version: 	0x0
+entry: 			0x0
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x0
+self: 			0x0
+csf: 			0x0
+reserved2: 		0x0
+boot_data.start: 	0x0
+boot_data.size: 	0x0
+boot_data.plugin: 	0x0
+========= IVT HEADER [PLUGIN] =========
+header.tag: 		0x0
+header.length: 		0x0
+header.version: 	0x0
+entry: 			0x0
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x0
+self: 			0x0
+csf: 			0x0
+reserved2: 		0x0
+boot_data.start: 	0x0
+boot_data.size: 	0x0
+boot_data.plugin: 	0x0
+========= IVT HEADER [LOADER IMAGE] =========
+header.tag: 		0xd1
+header.length: 		0x2000
+header.version: 	0x41
+entry: 			0x920000
+reserved1: 		0x0
+dcd_ptr: 		0x0
+boot_data_ptr: 		0x91ffe0
+self: 			0x91ffc0
+csf: 			0x946dc0
+reserved2: 		0x0
+boot_data.start: 	0x91ffc0
+boot_data.size: 	0x28e60
+boot_data.plugin: 	0x0
+========= OFFSET dump =========
+Loader IMAGE:
+ header_image_off 	0x0
+ dcd_off 		0x0
+ image_off 		0x40
+ csf_off 		0x26e00
+ spl hab block: 	0x91ffc0 0x0 0x26e00
+
+Second Loader IMAGE:
+ sld_header_off 	0x58000
+ sld_csf_off 		0x59020
+ sld hab block: 	0x401fcdc0 0x58000 0x1020
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+make[1]: Entering directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+./../scripts/pad_image.sh tee.bin
+Pad file tee.bin NOT found
+./../scripts/pad_image.sh bl31.bin
+./../scripts/pad_image.sh u-boot-nodtb.bin phycore-imx8mp.dtb
+TEE_LOAD_ADDR=0x56000000 ATF_LOAD_ADDR=0x00970000 VERSION=v2 ./print_fit_hab.sh 0x60000 phycore-imx8mp.dtb
+0x40200000 0x5B000 0xC3F48
+0x402C3F48 0x11EF48 0x6D98
+0x970000 0x125CE0 0xA410
+make[1]: Leaving directory '/home/venugopal/android_build/vendor/nxp-opensource/imx-mkimage'
+===================Finish building imx8mp-uuu:phycore-imx8mp_android_uuu_defconfig ===================
+make: Leaving directory '/home/venugopal/android_build'

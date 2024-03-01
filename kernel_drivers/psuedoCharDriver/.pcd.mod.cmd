@@ -1,0 +1,1 @@
+savedcmd_/home/venu/prep/kernel_drivers/psuedoCharDriver/pcd.mod := printf '%s\n'   pcd.o | awk '!x[$$0]++ { print("/home/venu/prep/kernel_drivers/psuedoCharDriver/"$$0) }' > /home/venu/prep/kernel_drivers/psuedoCharDriver/pcd.mod

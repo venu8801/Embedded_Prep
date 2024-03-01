@@ -1,0 +1,1 @@
+savedcmd_/home/venu/prep/kernel_drivers/psuedoCharDriver/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/venu/prep/kernel_drivers/psuedoCharDriver/Module.symvers -T /home/venu/prep/kernel_drivers/psuedoCharDriver/modules.order -i Module.symvers -e 

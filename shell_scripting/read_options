@@ -1,0 +1,16 @@
+#! /bin/bash
+ 
+# shell script without .sh extension at the file name
+
+: '
+	this will also work but editor treats this file as a normal text file 
+	and doesnt apply any kind of decorations to the text written 
+	inside the file '
+
+read -p "user name: " user_name
+read -sp "password: " user_password
+
+echo "hello $user_name"
+echo "Entered password: $user_password"
+
+

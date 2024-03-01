@@ -1,0 +1,1 @@
+savedcmd_/home/venu/prep/kernel_drivers/basicModule/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/venu/prep/kernel_drivers/basicModule/Module.symvers -T /home/venu/prep/kernel_drivers/basicModule/modules.order -i Module.symvers -e 
